@@ -1,0 +1,149 @@
+:root {
+    --bgColor: #895FAB;
+    --bgColor-darkAlt: #422555;
+    --textColor: #D8B4E2;
+    --bgAlt: #BC96E6;
+    --bgColor-dark: #61308a;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: var(--bgColor);
+    color: var(--textColor);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background-color: var(--bgColor-darkAlt);
+    width: 100%;
+}
+
+.webTitle {
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    color: white;
+}
+.webTitle h1 a{
+    color: white;
+    text-decoration: none;
+}
+.webTitle:hover {
+    cursor: pointer;
+}
+/* MAIN NAVIGATION */
+.navMain {
+    width: 60%;
+}
+.navMain ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    list-style-type: none;
+}
+.navMain ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 70%;
+    height: 500px;
+    margin: 30px;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 25px;
+}
+
+.about-me ul li {
+    list-style: none;
+    padding: 50px;
+}
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+}
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+  
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+  
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    padding: 10 px;
+
+  }
+  .circle {
+    border-radius: 50%;
+    border: solid black 1px;
+    width: 150px;
+    height: 150px;
+    margin-right: 50%;
+}
+
+.aboutMeHeader {
+    display: flex;
+    position: absolute;
+    font-size: 32px;
+    top: 140px;
+    left: 11rem;
+}
+.abtImg {
+    width: 300px;
+    justify-content: start;
+    padding: 20px;
+    margin: 40px;
+    border: dashed 3px black;
+}
+
+.cloudvu {
+    display: flex;
+    justify-content: center;
+    margin: 200px 0;
+    
+}
+.cloudvu img{
+    width: 60%;
+    border: solid black 4px;
+    transition: transform 0.1s ease-out;
+}
+.cloudvu img:hover{
+    transform: scale(1.02);
+}
+.cloudvu img:hover::before{
+    content: "";
+    height: 500px;
+    width: 200px;
+    background-color: red;
+    border: solid black 1px;
+}

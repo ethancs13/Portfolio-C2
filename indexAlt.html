@@ -33,8 +33,8 @@
     <div class="navMain">
         <ul>
             <li><a id="abt-me-link" href="#bio">About Me</a></li>
-            <li><a id="portfolio-link" href="#">Portfolio</a></li>
-            <li><a  id="contact-link" href="#">Contact Me</a></li>
+            <li><a id="portfolio-link" href="#cardContainer">Portfolio</a></li>
+            <li><a  id="contact-link" href="#contactContainer">Contact Me</a></li>
             <li><a id="resume-link" href="#resume">Resume</a></li>
         </ul>
     </div>
@@ -55,42 +55,42 @@
     </div>
 
     <!-- Beginning of Card Container -->
-    <div class="cardContainer">
+    <div class="cardContainer" id="cardContainer">
 
         <section class="card1" id="card1">
             <!-- CARD HEADER -->
-            <div class="bioH" id="H1">
-                <h1>Custom CSS</h1>
+            <div id="H1">
+                <h1>CSS</h1>
             </div>
             <!-- CARD 1 CONTENT-->
-            <div class="bioContent" id="contentOne"></div>
+            <div class="image1"id="image1"></div>
         </section>
 
         <section class="card2" id="card2">
             <!-- CARD HEADER 2 -->
-            <div class="bioH" id="H2">
-                <h1>Custom HTML</h1>
+            <div class="cardHeader" id="H2">
+                <h1>HTML</h1>
             </div>
             <!-- CARD 2 CONTENT -->
-            <div class="bioContent" id="contentTwo"></div>
+            <div class="cardImage" id="image2"></div>
         </section>
 
         <section class="card3" id="card3">
             <!-- CARD HEADER 3 -->
-            <div class="bioH" id="H3">
+            <div class="cardHeader" id="H3">
                 <h1>JavaScript</h1>
             </div>
             <!-- CARD 3 CONTENT -->
-            <div class="bioContent" id="contentThree"></div>
+            <div class="cardImage" id="image3"></div>
         </section>
 
         <section class="card4" id="card4">
             <!-- CARD HEADER 4 -->
-            <div class="bioH" id="H4">
+            <div class="cardHeader" id="H4">
                 <h1>Projects</h1>
             </div>
             <!-- CARD 4 CONTENT-->
-            <div class="bioContent" id="contentFour"></div>
+            <div class="cardImage" id="image4"></div>
         </section>
     </div>
 
@@ -120,6 +120,18 @@
             </a>
         </figure>
     </div>
+
+    <!-- Contact Me Section -->
+    <span class="contactContainer" id="contactContainer">
+        <div>
+            <h1 class="contactContainer--header">Contact Me</h1>
+            <ul>
+                <li><a href="#" id="contactContainer--email">ethansroka@gmail.com</a></li>
+                <li><a href="#" id="contactContainer--num">(720) 354-2601</a></li>
+                <li><a href="#" id="contactContainer--socials">linkedIn</a></li>
+            </ul>
+        </div>
+    </span>
 
 </body>
 

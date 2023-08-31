@@ -100,6 +100,7 @@ header {
     align-items: center;
     padding-left: 0;
     margin-left: 0;
+    
 }
 .profPic img{
     height: 150px;
@@ -109,80 +110,33 @@ header {
 }
 
 /* Card container and section styling */
-.cardContainer, .card1, .card2, .card3,.card4 {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 200px;
-    flex-direction: row;
-    margin-top: 20px;
-    z-index: 0;
-}
-.card1, .card2, .card3, .card4 {
-    height: 400px;
-    width: 50%;
-}
 .cardContainer {
     display: flex;
-    height: 100%;
+    flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
 }
-/* Content container for card (Parent) */
-.bioContent {
-    min-width: 450px;
-    width: auto;
-    height: 250px;
-    padding: 20px;
-    margin-right: 55px;
+.card1, .card2, .card3, .card4 {
+    position: relative;
+    width: 50%;
     display: flex;
-    justify-content: center;
-    box-shadow: 3px 3px 5px #422555;
+    align-items: center;
+    height: 400px;
+    z-index: 0;
+    margin-left: -20px;
+    padding: 0 5px;
 }
-
-/* Content inside container for cards (child) */
-#contentOne {
-    aspect-ratio: 16 / 9;
-    background-image: url("https://i0.wp.com/css-tricks.com/wp-content/uploads/2020/01/code-block-screenshot.png?fit=1200%2C600&ssl=1");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 700px;
+.card1 {
+    margin-left: 0;
+    width: 100%;
 }
-#contentTwo {
-    aspect-ratio: 16 / 9;
-    background-image: url("https://global.discourse-cdn.com/freecodecamp/original/3X/8/9/89bf55e940bbca5333a8bf904c6da7212386f3aa.png");
-    background-size: 150%;
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: cover;
-    margin-left: 0px;
-    width: 700px;
-}
-#contentThree {
-    background-image: url("https://miro.medium.com/v2/resize:fit:2000/1*BPSx-c--z6r7tY29L19ukQ.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 700px;
-}
-#contentFour {
-    background-image: url("https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 700px;
-}
-
-
 /* Header Styling (children) */
 #H1, #H2, #H3 , #H4 {
-    position: relative;
-    bottom: 160px;
-    left: 26%;
+    position: absolute;
+    left: 80px;
+    bottom: 340px;
     padding: 10px;
-    margin-left: -7rem;
-    text-align: center;
     z-index: 3;
     background-color: var(--bgColor-dark);
     color: var(--textColor);
@@ -190,38 +144,73 @@ header {
     box-shadow: 5px 5px 10px var(--bgColor-darkAlt);
 }
 #H1 {
-    width: 230px;
-}
-#H2  {
-    width: 240px;
-}
-#H3 {
-    width: 180px;
-}
-#H4 {
-    width: 130px;
+    bottom: 380px;
+    width: 200px;
+    left: 60px;
+    text-align: center;
 }
 
+/* Content container for card (Parent) */
+.cardImage {
+    min-width: 40vw;
+    width: auto;
+    height: 320px;
+    box-shadow: 3px 3px 5px #422555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 100px;
+}
+
+/* Content inside container for cards (child) */
+#image1,
+#image2,
+#image3,
+#image4 {
+    object-fit: cover;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+#image1 {
+    background-image: url("https://i0.wp.com/css-tricks.com/wp-content/uploads/2020/01/code-block-screenshot.png?fit=1200%2C600&ssl=1");
+}
+#image2 {
+    background-image: url("https://global.discourse-cdn.com/freecodecamp/original/3X/8/9/89bf55e940bbca5333a8bf904c6da7212386f3aa.png");
+}
+#image3 {
+    background-image: url("https://miro.medium.com/v2/resize:fit:2000/1*BPSx-c--z6r7tY29L19ukQ.png");
+}
+#image4 {
+    background-image: url("https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU");
+}
+.image1 {
+    width: 100%;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5rem;
+}
 /* -----------------HOVER ANIMATIONS------------------ */
 
-#contentOne,
+#image1,
 #H1, 
-#contentTwo,
+#image2,
 #H2,
-#contentThree,
+#image3,
 #H3,
-#contentFour,
+#image4,
 #H4 {
     transition: transform .2s ease-in;
 }
 
-.card1:hover #contentOne,
+.card1:hover #image1,
 .card1:hover #H1,
-.card2:hover #contentTwo,
+.card2:hover #image2,
 .card2:hover #H2,
-.card3:hover #contentThree,
+.card3:hover #image3,
 .card3:hover #H3,
-.card4:hover #contentFour,
+.card4:hover #image4,
 .card4:hover #H4{
     background-color: var(--bgAlt);
     color: var(--bgColor-darkAlt);
@@ -232,10 +221,10 @@ header {
 
 
 
-.card1:hover .bioContent::after,
-.card2:hover .bioContent::after,
-.card3:hover .bioContent::after,
-.card4:hover .bioContent::after {
+.card1:hover .cardImage::after,
+.card2:hover .cardImage::after,
+.card3:hover .cardImage::after,
+.card4:hover .cardImage::after {
     content: "";
     height: 100%;
     width: 100%;
@@ -243,6 +232,8 @@ header {
     top: 0px;
     background-color: rgba(0, 0, 0, 0.25);
 }
+
+
 
 
 /* Resume section (Parent)*/
@@ -305,8 +296,55 @@ header {
     text-shadow: 15px 15px 10px black;
 }
 
+
+
+
+
+.contactContainer {
+    display: flex;
+    height: 300px;
+    padding: 10px 10px;
+    align-items: center;
+    justify-content: space-around;
+}
+.contactContainer--header {
+    cursor: default;
+}
+.contactContainer div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.contactContainer div h1 {
+    padding: 0px 100px;
+}
+.contactContainer ul {
+    display: flex;
+    padding: 0px 100px;
+}
+
+.contactContainer ul li {
+    list-style-type: none;
+    text-align: center;
+    padding: 0 20px;
+}
+.contactContainer ul li a {
+    text-decoration: none;
+    color: var(--textColor);
+}
+
 /* Mobile/Smaller screen functionality */
 @media screen and (max-width: 1000px) {
+
+    /* Change Nav */
+    .navMain {
+        display: none;
+    }
+    .navAlt {
+        display: flex;
+    }
+
 
     /* Column from row */
     .resume {
@@ -353,9 +391,23 @@ header {
     /* One card per line */
     .cardContainer {
         flex-direction: column;
+        width: 100%;
     }
     .card1, .card2, .card3, .card4 {
         width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .cardImage, #image1{
+        min-width: 80%;
+        margin: 20px;
+        padding: 0;
+        height: 320px;
+        width: auto;
+    }
+    
+    #image1 {
+        margin-left: 0;
     }
 }
 /* End of media query */

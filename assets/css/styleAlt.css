@@ -84,15 +84,28 @@ header {
 
 /* BIOGRAPHY (Parent) */
 .bio {
-    height: 100px;
+    height: 200px;
     margin: 30px 30px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     text-align: left;
     align-items: center;
     border: solid 3px var(--bgAlt);
     border-radius: 5px;
+}
+.bioH {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 0;
+    margin-left: 0;
+}
+.profPic img{
+    height: 150px;
+    padding: 10px;
+    position: relative;
+    left: -15vw;
 }
 
 /* Card container and section styling */
@@ -117,10 +130,11 @@ header {
 }
 /* Content container for card (Parent) */
 .bioContent {
-    width: 100%;
+    min-width: 450px;
+    width: auto;
     height: 250px;
     padding: 20px;
-    margin: 40px;
+    margin-right: 55px;
     display: flex;
     justify-content: center;
     box-shadow: 3px 3px 5px #422555;
@@ -128,7 +142,7 @@ header {
 
 /* Content inside container for cards (child) */
 #contentOne {
-    width: 100%;
+    aspect-ratio: 16 / 9;
     background-image: url("https://i0.wp.com/css-tricks.com/wp-content/uploads/2020/01/code-block-screenshot.png?fit=1200%2C600&ssl=1");
     background-size: cover;
     background-repeat: no-repeat;
@@ -136,7 +150,7 @@ header {
     width: 700px;
 }
 #contentTwo {
-    width: 100%;
+    aspect-ratio: 16 / 9;
     background-image: url("https://global.discourse-cdn.com/freecodecamp/original/3X/8/9/89bf55e940bbca5333a8bf904c6da7212386f3aa.png");
     background-size: 150%;
     background-repeat: no-repeat;
@@ -146,7 +160,6 @@ header {
     width: 700px;
 }
 #contentThree {
-    width: 100%;
     background-image: url("https://miro.medium.com/v2/resize:fit:2000/1*BPSx-c--z6r7tY29L19ukQ.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -154,7 +167,6 @@ header {
     width: 700px;
 }
 #contentFour {
-    width: 100%;
     background-image: url("https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU");
     background-repeat: no-repeat;
     background-position: center;
@@ -162,19 +174,18 @@ header {
     width: 700px;
 }
 
+
 /* Header Styling (children) */
 #H1, #H2, #H3 , #H4 {
     position: relative;
-    bottom: 170px;
+    bottom: 160px;
     left: 26%;
     padding: 10px;
     margin-left: -7rem;
-    width: 200px;
     text-align: center;
     z-index: 3;
     background-color: var(--bgColor-dark);
     color: var(--textColor);
-
     border-radius: 20px;
     box-shadow: 5px 5px 10px var(--bgColor-darkAlt);
 }
@@ -184,43 +195,47 @@ header {
 #H2  {
     width: 240px;
 }
+#H3 {
+    width: 180px;
+}
 #H4 {
-    width: 150px;
+    width: 130px;
 }
 
 /* -----------------HOVER ANIMATIONS------------------ */
 
-.card1:hover #contentOne,.card1:hover #H1 {
-    background-color: var(--bgAlt);
-    color: var(--bgColor-darkAlt);
-    box-shadow: 2px 2px 5px var(--bgColor-darkAlt);
-    transform: scale(1.01) translateY(-10px);
-}
-#contentOne, #H1, #contentTwo, #H2, #contentThree, #H3, #contentFour, #H4 {
+#contentOne,
+#H1, 
+#contentTwo,
+#H2,
+#contentThree,
+#H3,
+#contentFour,
+#H4 {
     transition: transform .2s ease-in;
 }
-.card2:hover #contentTwo,.card2:hover #H2 {
+
+.card1:hover #contentOne,
+.card1:hover #H1,
+.card2:hover #contentTwo,
+.card2:hover #H2,
+.card3:hover #contentThree,
+.card3:hover #H3,
+.card4:hover #contentFour,
+.card4:hover #H4{
     background-color: var(--bgAlt);
     color: var(--bgColor-darkAlt);
     box-shadow: 2px 2px 5px var(--bgColor-darkAlt);
     transform: scale(1.01) translateY(-10px);
+    border: #BC96E6 solid 2px;
 }
 
-.card3:hover #contentThree,.card3:hover #H3 {
-    background-color: var(--bgAlt);
-    color: var(--bgColor-darkAlt);
-    box-shadow: 2px 2px 5px var(--bgColor-darkAlt);
-    transform: scale(1.01) translateY(-10px);
-}
 
-.card4:hover #contentFour,.card4:hover #H4 {
-    background-color: var(--bgAlt);
-    color: var(--bgColor-darkAlt);
-    box-shadow: 2px 2px 5px var(--bgColor-darkAlt);
-    transform: scale(1.01) translateY(-10px);
-}
 
-.card1:hover .bioContent::after, .card2:hover .bioContent::after, .card3:hover .bioContent::after, .card4:hover .bioContent::after {
+.card1:hover .bioContent::after,
+.card2:hover .bioContent::after,
+.card3:hover .bioContent::after,
+.card4:hover .bioContent::after {
     content: "";
     height: 100%;
     width: 100%;
@@ -332,8 +347,10 @@ header {
     .resumeText span {
         display:none;
     }
-    .resumeText h1 {}
 
+
+
+    /* One card per line */
     .cardContainer {
         flex-direction: column;
     }
@@ -341,7 +358,7 @@ header {
         width: 100%;
     }
 }
-
+/* End of media query */
 footer {
     background-color:#61308a;
     height: 60px;

@@ -5,16 +5,23 @@
     --bgAlt: #BC96E6;
     --bgColor-dark: #61308a;
 }
+
+/* Universal Class: 
+    - Set margin and padding to 0 so browsers don't add any
+    - change font-family to the google font I chose */
 * {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;  
 }
 
+/* Make all elements background color purple */
 html {
     background-color: var(--bgColor);
 }
 
+/* Theme Switcher Button to change to my testing
+space for the webpages and other functionality */
 .theme-btn {
     height: 30px;
     width: 60px;
@@ -29,6 +36,7 @@ html {
     font-weight: 700;
 }
 
+/* The Styling for the whole header section (Parent) */
 header {
     display: flex;
     flex-direction: row;
@@ -39,6 +47,7 @@ header {
     width: 100%;
 }
 
+/* Title element inside header (Child)*/
 .webTitle {
     display: flex;
     align-items: center;
@@ -48,7 +57,7 @@ header {
 .webTitle:hover {
     cursor: pointer;
 }
-/* MAIN NAVIGATION */
+/* MAIN NAVIGATION (child) */
 .navMain {
     width: 60%;
 }
@@ -73,7 +82,7 @@ header {
     font-style: normal;
 }
 
-/* BIOGRAPHY */
+/* BIOGRAPHY (Parent) */
 .bio {
     height: 100px;
     margin: 30px 30px;
@@ -86,8 +95,8 @@ header {
     border-radius: 5px;
 }
 
-
-.cardContainer, .sectionOne, .sectionTwo, .sectionThree,.sectionFour {
+/* Card container and section styling */
+.cardContainer, .card1, .card2, .card3,.card4 {
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -97,20 +106,19 @@ header {
     margin-top: 20px;
     z-index: 0;
 }
-
-.sectionOne, .sectionTwo, .sectionThree, .sectionFour {
+.card1, .card2, .card3, .card4 {
     height: 400px;
     width: 50%;
 }
-
 .cardContainer {
     display: flex;
     height: 100%;
     flex-wrap: wrap;
 }
+/* Content container for card (Parent) */
 .bioContent {
     width: 100%;
-    height: 300px;
+    height: 250px;
     padding: 20px;
     margin: 40px;
     display: flex;
@@ -118,13 +126,14 @@ header {
     box-shadow: 3px 3px 5px #422555;
 }
 
+/* Content inside container for cards (child) */
 #contentOne {
     width: 100%;
     background-image: url("https://i0.wp.com/css-tricks.com/wp-content/uploads/2020/01/code-block-screenshot.png?fit=1200%2C600&ssl=1");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 600px;
+    width: 700px;
 }
 #contentTwo {
     width: 100%;
@@ -134,7 +143,7 @@ header {
     background-position: left;
     background-size: cover;
     margin-left: 0px;
-    width: 600px;
+    width: 700px;
 }
 #contentThree {
     width: 100%;
@@ -142,7 +151,7 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 600px;
+    width: 700px;
 }
 #contentFour {
     width: 100%;
@@ -150,10 +159,10 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 600px;
-        
+    width: 700px;
 }
 
+/* Header Styling (children) */
 #H1, #H2, #H3 , #H4 {
     position: relative;
     bottom: 170px;
@@ -169,16 +178,19 @@ header {
     border-radius: 20px;
     box-shadow: 5px 5px 10px var(--bgColor-darkAlt);
 }
-
+#H1 {
+    width: 230px;
+}
 #H2  {
-    width: 220px;
+    width: 240px;
 }
 #H4 {
     width: 150px;
 }
-/* HOVER ANIMATIONS */
 
-.sectionOne:hover #contentOne,.sectionOne:hover #H1 {
+/* -----------------HOVER ANIMATIONS------------------ */
+
+.card1:hover #contentOne,.card1:hover #H1 {
     background-color: var(--bgAlt);
     color: var(--bgColor-darkAlt);
     box-shadow: 2px 2px 5px var(--bgColor-darkAlt);
@@ -187,28 +199,28 @@ header {
 #contentOne, #H1, #contentTwo, #H2, #contentThree, #H3, #contentFour, #H4 {
     transition: transform .2s ease-in;
 }
-.sectionTwo:hover #contentTwo,.sectionTwo:hover #H2 {
+.card2:hover #contentTwo,.card2:hover #H2 {
     background-color: var(--bgAlt);
     color: var(--bgColor-darkAlt);
     box-shadow: 2px 2px 5px var(--bgColor-darkAlt);
     transform: scale(1.01) translateY(-10px);
 }
 
-.sectionThree:hover #contentThree,.sectionThree:hover #H3 {
+.card3:hover #contentThree,.card3:hover #H3 {
     background-color: var(--bgAlt);
     color: var(--bgColor-darkAlt);
     box-shadow: 2px 2px 5px var(--bgColor-darkAlt);
     transform: scale(1.01) translateY(-10px);
 }
 
-.sectionFour:hover #contentFour,.sectionFour:hover #H4 {
+.card4:hover #contentFour,.card4:hover #H4 {
     background-color: var(--bgAlt);
     color: var(--bgColor-darkAlt);
     box-shadow: 2px 2px 5px var(--bgColor-darkAlt);
     transform: scale(1.01) translateY(-10px);
 }
 
-.sectionOne:hover .bioContent::after, .sectionTwo:hover .bioContent::after, .sectionThree:hover .bioContent::after, .sectionFour:hover .bioContent::after {
+.card1:hover .bioContent::after, .card2:hover .bioContent::after, .card3:hover .bioContent::after, .card4:hover .bioContent::after {
     content: "";
     height: 100%;
     width: 100%;
@@ -218,6 +230,7 @@ header {
 }
 
 
+/* Resume section (Parent)*/
 .resume {
     display: flex;
     flex-direction: row;
@@ -227,15 +240,17 @@ header {
     width: 100%;
     background-image: linear-gradient(var(--bgColor) 0%, var(--bgColor-darkAlt) 30%);
     margin-top: 100px;
-    
 }
-.resumeImage {
 
+/* image container for resume (child <-- parent) */
+.resumeImage {
     margin: 100px;
     box-shadow: 0px 20px 80px black;
     transition: transform ease-out 0.4s;
     width: 50%;
 }
+
+/* Image inside image container (child) */
 .resumeImage img{
     max-width: 50vw;
     width: auto;
@@ -243,7 +258,7 @@ header {
     border: solid 5px var(--bgAlt);
     border-radius: 5px;
 }
-
+/* Hover stuff for image */
 .resumeImage:hover {
     transform: translateY(-8px);
     cursor: pointer;
@@ -252,6 +267,7 @@ header {
     box-shadow: 1px 1px 30px 3px var(--bgAlt);
 }
 
+/* Text container for content inside resume (parent) */
 .resumeText {
     display: flex;
     justify-content: center;
@@ -260,6 +276,7 @@ header {
     width: 40%;
     margin-left: 5%;
 }
+/* Header (child) */
 .resumeText h1 {
     background-color:#61308a;
     padding: 10px;
@@ -267,15 +284,20 @@ header {
     box-shadow: 5px 5px 10px black;
     margin-bottom: 30px;
 }
+/* Text (child) */
 .resumeText span {
     padding: 25px;
     text-shadow: 15px 15px 10px black;
 }
 
+/* Mobile/Smaller screen functionality */
 @media screen and (max-width: 1000px) {
+
+    /* Column from row */
     .resume {
         flex-direction: column;
     }
+    /* make image larger */
     .resumeImage img {
         max-width: 80vw;
         width: 100%;
@@ -290,11 +312,18 @@ header {
     .resumeImage:hover img {
         box-shadow: 1px 1px 15px 2px var(--bgAlt);
     }
+    /* text styling
+        - Make text take up more space and fill the space appropriately
+        - remove unneccessary text that makes page look bad
+        - make sections (cards) take up 100% of the width */
+
     .resumeText {
         justify-content: center;
         width: 60%;
         margin-bottom: 0;
-        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
     }
     .resumeText span {
         margin: 0px;
@@ -303,11 +332,12 @@ header {
     .resumeText span {
         display:none;
     }
+    .resumeText h1 {}
 
     .cardContainer {
         flex-direction: column;
     }
-    .sectionOne, .sectionTwo, .sectionThree, .sectionFour {
+    .card1, .card2, .card3, .card4 {
         width: 100%;
     }
 }

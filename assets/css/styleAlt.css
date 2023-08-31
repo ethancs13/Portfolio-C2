@@ -172,7 +172,7 @@ header {
     background-size: cover;
 }
 #image1 {
-    background-image: url("https://i0.wp.com/css-tricks.com/wp-content/uploads/2020/01/code-block-screenshot.png?fit=1200%2C600&ssl=1");
+    background-image: url("https://switzerland-tour.com/storage/media/4-ForArticles/swiss-mountains.jpg");
 }
 #image2 {
     background-image: url("https://global.discourse-cdn.com/freecodecamp/original/3X/8/9/89bf55e940bbca5333a8bf904c6da7212386f3aa.png");
@@ -190,6 +190,7 @@ header {
     justify-content: center;
     align-items: center;
     margin: 0 5rem;
+    background-size: contain;
 }
 /* -----------------HOVER ANIMATIONS------------------ */
 

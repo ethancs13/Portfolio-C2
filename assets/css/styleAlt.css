@@ -85,7 +85,7 @@ header {
 /* BIOGRAPHY (Parent) */
 .bio {
     height: 200px;
-    margin: 30px 30px;
+    margin: 60px 65px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -408,6 +408,18 @@ header {
     
     #image1 {
         margin-left: 0;
+    }
+    #H1 {
+        position: absolute;
+        left: 80px;
+        bottom: 340px;
+        padding: 10px;
+        z-index: 3;
+        background-color: var(--bgColor-dark);
+        color: var(--textColor);
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px var(--bgColor-darkAlt);
+        width: auto;
     }
 }
 /* End of media query */

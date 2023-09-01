@@ -117,7 +117,7 @@ header {
 }
 
 #contentOne {
-    background-image: url("https://i0.wp.com/css-tricks.com/wp-content/uploads/2020/01/code-block-screenshot.png?fit=1200%2C600&ssl=1");
+    background-image: url(/assets/images/banner.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

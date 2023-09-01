@@ -172,7 +172,7 @@ header {
     background-size: cover;
 }
 #image1 {
-    background-image: url("https://switzerland-tour.com/storage/media/4-ForArticles/swiss-mountains.jpg");
+    background-image: url("/assets/images/banner.png");
 }
 #image2 {
     background-image: url("https://global.discourse-cdn.com/freecodecamp/original/3X/8/9/89bf55e940bbca5333a8bf904c6da7212386f3aa.png");
@@ -218,6 +218,7 @@ header {
     box-shadow: 2px 2px 5px var(--bgColor-darkAlt);
     transform: scale(1.01) translateY(-10px);
     border: #BC96E6 solid 2px;
+    cursor: pointer;
 }
 
 
@@ -295,6 +296,11 @@ header {
 .resumeText span {
     padding: 25px;
     text-shadow: 15px 15px 10px black;
+    line-height: 35px;
+}
+.resumeText span a {
+    color: var(--bgColor);
+    text-decoration: none;
 }
 
 

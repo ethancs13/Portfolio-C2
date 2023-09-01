@@ -82,6 +82,10 @@ header {
     font-style: normal;
 }
 
+.navAlt {
+    display:none;
+}
+
 /* BIOGRAPHY (Parent) */
 .bio {
     height: 200px;
@@ -350,7 +354,32 @@ header {
     }
     .navAlt {
         display: flex;
+        justify-content: end;
+        width: 40%;
+        margin-right: 5rem;
     }
+    .navAlt ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        list-style-type: none;
+    }
+    .navAlt ul li a {
+        font-size: 10px;
+        text-decoration: none;
+        color: white;
+    }
+    .navAlt ul li a:hover {
+        font-style: italic;
+        color:#D8B4E2;
+        transform: scale(1.05);
+    }
+    .navAlt ul li a:not(:hover) {
+        font-style: normal;
+    }
+
+
 
 
     /* Column from row */

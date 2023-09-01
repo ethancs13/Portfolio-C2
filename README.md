@@ -1,5 +1,7 @@
 # Portfolio Website
 
+https://ethancs13.github.io/Chall2/
+
 ## Description
 
 - To build a website that looks good as well as has functionality
@@ -21,6 +23,8 @@
 - Run index file in browser or live server
 
 ## Usage
+
+### Click assigned button next to web title to go to assignment site (Or run from indexAlt.html)
 
 
 ![alt text](/assets/images/Recording%202023-08-31%20024321(3).gif)

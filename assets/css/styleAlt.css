@@ -176,7 +176,7 @@ header {
     background-size: cover;
 }
 #image1 {
-    background-image: url("/assets/images/banner.png");
+    background-image: url("../images/banner.png");
 }
 #image2 {
     background-image: url("https://global.discourse-cdn.com/freecodecamp/original/3X/8/9/89bf55e940bbca5333a8bf904c6da7212386f3aa.png");

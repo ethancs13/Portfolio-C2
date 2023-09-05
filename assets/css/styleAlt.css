@@ -92,7 +92,7 @@ header {
     margin: 60px 65px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     text-align: left;
     align-items: center;
     border: solid 3px var(--bgAlt);
@@ -102,15 +102,26 @@ header {
     display: flex;
     justify-content: left;
     align-items: center;
-    padding-left: 0;
-    margin-left: 0;
-    
+    padding: 10px;
+    margin-left: 40px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    color: var(--bgAlt);
+    border: solid var(--bgAlt) 3px;
+    background-color: var(--bgColor-darkAlt);
+    border-radius: 25px;
+}
+.bioText {
+    width: 500px;
+    margin-left: 10px;
+    margin-right: 30px;
+    font-weight: 900;
+    color: var(--bgColor-darkAlt);
 }
 .profPic img{
     height: 150px;
     padding: 10px;
     position: relative;
-    left: -15vw;
 }
 
 /* Card container and section styling */

@@ -87,17 +87,17 @@ main {
     -webkit-transform: rotate(-45deg);
   }
   
-  .left {
+.left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
   }
   
-  .up {
+.up {
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
   }
   
-  .down {
+.down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     padding: 10px;
@@ -105,7 +105,7 @@ main {
     left: 13px;
     top: 8px;
   }
-  .circle {
+.circle {
     border-radius: 50%;
     border: solid black 1px;
     width: 50px;

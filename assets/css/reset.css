@@ -13,6 +13,7 @@
 html {
     background-color: var(--bgColor);
     color: var(--textColor);
+    scroll-behavior: smooth;
 }
 
 header {

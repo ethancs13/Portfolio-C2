@@ -119,26 +119,31 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
 }
 .card1, .card2, .card3, .card4 {
     position: relative;
-    width: 50%;
+    width: 47%;
     display: flex;
     align-items: center;
     height: 400px;
     z-index: 0;
-    margin-left: -20px;
     padding: 0 5px;
+    display: flex;
+    justify-content: center;
 }
-.card1 {
-    margin-left: 0;
+.card1Alt {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 /* Header Styling (children) */
 #H1, #H2, #H3 , #H4 {
     position: absolute;
-    left: 80px;
+    left: 40px;
     bottom: 340px;
     padding: 10px;
     z-index: 3;
@@ -148,9 +153,9 @@ header {
     box-shadow: 5px 5px 10px var(--bgColor-darkAlt);
 }
 #H1 {
-    bottom: 380px;
+    bottom: 500px;
     width: 200px;
-    left: 60px;
+    left: 3rem;
     text-align: center;
 }
 
@@ -163,7 +168,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 100px;
+    margin: 0;
 }
 
 /* Content inside container for cards (child) */
@@ -193,7 +198,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 5rem;
+    margin: 0 4rem;
     background-size: contain;
 }
 /* -----------------HOVER ANIMATIONS------------------ */
@@ -434,6 +439,7 @@ header {
         display: flex;
         justify-content: center;
     }
+    
     .cardImage, #image1{
         min-width: 80%;
         margin: 20px;
@@ -447,7 +453,7 @@ header {
     }
     #H1 {
         position: absolute;
-        left: 80px;
+        left: 40px;
         bottom: 340px;
         padding: 10px;
         z-index: 3;
@@ -457,6 +463,7 @@ header {
         box-shadow: 5px 5px 10px var(--bgColor-darkAlt);
         width: auto;
     }
+    
 }
 /* End of media query */
 footer {

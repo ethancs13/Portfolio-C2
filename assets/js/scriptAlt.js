@@ -41,7 +41,6 @@ function myFunction(x) {
     if (x.matches) { // If media query matches
         card1.classList.remove('card1Alt')
         card1.classList.add('card1')
-        console.log(card1)
     } else {
         card1.classList.remove('card1')
         card1.classList.add('card1Alt')
@@ -78,3 +77,27 @@ function topFunction() {
 } 
 
 mybutton.addEventListener('click', topFunction)
+
+
+
+// When hamburger menu is clicked open menu 'list'
+const mobileNav__menu = document.getElementById('lineContainer')
+const mobileNav__dropDown = document.getElementById('navAlt__dropDown')
+const items = document.querySelectorAll(".navAlt__listItem")
+
+
+function mobileNav__click() {
+  if (mobileNav__dropDown.style.display == "none") {
+    mobileNav__dropDown.style.display = "flex";
+  } else {
+    mobileNav__dropDown.style.display = "none";
+  }
+}
+
+function mobileNav__dropDown__click() {
+  mobileNav__dropDown.style.display = "none";
+}
+
+
+mobileNav__menu.addEventListener('click', mobileNav__click)
+mobileNav__dropDown.addEventListener('click', mobileNav__dropDown__click)

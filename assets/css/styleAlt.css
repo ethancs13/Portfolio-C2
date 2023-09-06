@@ -417,6 +417,9 @@ header {
     justify-content: center;
     z-index: 4;
 }
+.arrowContainer:hover {
+    cursor: pointer;
+}
 
 
 
@@ -435,24 +438,60 @@ header {
         margin-right: 5rem;
     }
     .navAlt ul {
-        display: flex;
+        display: none;
         justify-content: space-around;
         align-items: center;
         flex-direction: column;
         list-style-type: none;
+        position: absolute;
+        top: 70px;
+        right: 55px;
+        width: 200px;
+    }
+    .lineContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        z-index: 4;
+    }
+    .menuLine {
+        width: 40px;
+        height: 3px;
+        background-color: var(--bgAlt);
+        margin: 4px;
+        border-radius: 20px;
+    }
+    .navAlt ul li {
+        padding: 5px 0px;
+        margin: 2px 10px;
+        width: 100%;
+        text-align: center;
+        border: solid var(--bgAlt) 1px;
+        background-color: rgba(66,37,85,0.7);
+        transition: transform .2s linear;
     }
     .navAlt ul li a {
-        font-size: 10px;
+        font-size: 16px;
         text-decoration: none;
         color: white;
+        width: 200px;
     }
-    .navAlt ul li a:hover {
+    /* .navAlt ul li:hover a {
         font-style: italic;
         color:#D8B4E2;
         transform: scale(1.05);
+    } */
+    .navAlt ul li:hover{
+        background-color: #422555;
+        font-style: italic;
+        color:#D8B4E2;
+        transform: translateX(-10px);
     }
-    .navAlt ul li a:not(:hover) {
+    .navAlt ul li:not(:hover) {
         font-style: normal;
+    }
+    .lineContainer:hover {
+        cursor: pointer;
     }
 
 

@@ -134,23 +134,67 @@ header {
     width: 100%;
 }
 .card1, .card2, .card3, .card4 {
+    display: flex;
     position: relative;
     width: 47%;
-    display: flex;
     align-items: center;
     height: 400px;
     z-index: 0;
     padding: 0 5px;
-    display: flex;
     justify-content: center;
 }
 .card1Alt {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 0;
     margin-bottom: 50px;
 }
+
+/* Card flip info  */
+.cardInfo__1,.cardInfo__2,.cardInfo__2,.cardInfo__3,.cardInfo__4{
+    display: flex;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    height: 400px;
+    z-index: 0;
+    padding: 0;
+    margin: 0 50px;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    flex-direction: column;
+}
+.cardInfo__1:hover,.cardInfo__2:hover,.cardInfo__2:hover,.cardInfo__3:hover,.cardInfo__4:hover{
+    cursor: pointer;
+}
+.cardInfo__text-1::after {
+    content: "Card one content goes here";
+}
+.cardInfo__text-2::after {
+    content: "Card Two content goes here";
+}
+.cardInfo__text-3::after {
+    content: "Card Three content goes here";
+}
+.cardInfo__text-4::after {
+    content: "Card Four content goes here";
+}
+.cardHeader__text-1::after {
+    content: "CSS";
+}
+.cardHeader__text-2::after {
+    content: "HTML";
+}
+.cardHeader__text-3::after {
+    content: "JavaScript";
+}
+.cardHeader__text-4::after {
+    content: "Projects";
+}
+
 /* Header Styling (children) */
 #H2, #H3 , #H4 {
     position: absolute;

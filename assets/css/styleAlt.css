@@ -320,6 +320,16 @@ header {
     background-image: linear-gradient(var(--bgColor) 0%, var(--bgColor-darkAlt) 30%);
     margin-top: 100px;
 }
+.resume2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    width: 100%;
+    background-color: var(--bgColor-darkAlt);
+    
+}
 
 /* image container for resume (child <-- parent) */
 .resumeImage {
